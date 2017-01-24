@@ -1,0 +1,31 @@
+{
+  "name": "simplepack",
+  "version": "0.1.0",
+  "description": "Make pack simple then ever, base on webpack and rollup",
+  "main": "index.js",
+  "bin": {
+    "simplepack": "./bin/simplepack.js"
+  },
+  "scripts": {
+    "test": "cd test && open http://127.0.0.1:8080/ && node ../bin/simplepack.js dev --entry.index ./index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:Joker-Jelly/simplepack.git"
+  },
+  "dependencies": {
+    "argh": "^0.1.4",
+    "babel-core": "^6.20.0",
+    "babel-loader": "^6.2.9",
+    "babel-preset-latest": "^6.16.0",
+    "css-loader": "^0.26.1",
+    "less": "^2.7.2",
+    "less-loader": "^2.2.3",
+    "lodash": "^4.17.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^2.2.0",
+    "webpack-dev-server": "^2.2.0"
+  }
+}
