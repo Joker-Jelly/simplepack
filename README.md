@@ -1,5 +1,6 @@
 # simplepack
-Make pack simple then ever, base on webpack and rollup (**Currently webpack only**)
+Make pack simple then ever, base on **Webpack 2**
+
 Webpack is a damned good tool, but it complex config file let me crazy when be a beginner.
 
 So `simplepack` want to let you drop the complex config file, use single line command to finish the job.
@@ -66,7 +67,6 @@ put a js file to your project root, named `simplepack.config.js`
     },
     "css": {
       "css-loader": "^0.26.1",
-      "sass-loader": "^4.1.1",
       "less-loader": "^2.2.3",
       "style-loader": "^0.13.1"
     }
