@@ -1,15 +1,19 @@
 {
   "name": "simplepack",
-  "version": "0.1.0",
-  "description": "Make pack simple then ever, base on webpack and rollup",
+  "version": "1.0.0",
+  "description": "Make pack simple then ever, base on webpack",
   "main": "index.js",
   "bin": {
     "simplepack": "./bin/simplepack.js"
   },
   "scripts": {
-    "test": "cd test && open http://127.0.0.1:8080/ && node ../bin/simplepack.js dev --entry.index ./index.js"
+    "test": "cd test && node ../bin/simplepack.js dev --entry ./index.js"
   },
-  "author": "",
+  "engines": {
+    "node" : ">=6.x.x",
+    "npm" : ">=3.x.x"
+  },
+  "author": "Joker-Jelly",
   "license": "MIT",
   "repository": {
     "type": "git",
