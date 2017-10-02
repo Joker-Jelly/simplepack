@@ -81,7 +81,7 @@ Both dev and publish command has the **same options**
 | :------- | :--------------------------------------- | :-------------- | :------ |
 | entry    | The list entries                         | String / Object | null    |
 | compress | Whether uglify the output code           | Boolean         | false   |
-| export   | The name of Component export             | String          | null    |
+| export   | The name of Component export (commonly use to expose a library with **UMD**) | String          | null    |
 | cli-only | Use CLI config only, not merge config file | Boolean         | false   |
 
 #### option.entry
