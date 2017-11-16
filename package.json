@@ -1,6 +1,6 @@
 {
   "name": "simplepack",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Make pack simple then ever, base on webpack",
   "main": "index.js",
   "bin": {
@@ -10,8 +10,8 @@
     "test": "cd test && node ../bin/simplepack.js dev --entry ./index.js"
   },
   "engines": {
-    "node" : ">=6.x.x",
-    "npm" : ">=3.x.x"
+    "node": ">=6.x.x",
+    "npm": ">=3.x.x"
   },
   "author": "Joker-Jelly",
   "license": "MIT",
@@ -25,6 +25,7 @@
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
     "clean-webpack-plugin": "^0.1.16",
     "css-loader": "^0.28.7",
     "expose-loader": "^0.7.3",
