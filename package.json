@@ -9,6 +9,7 @@
   "scripts": {
     "test": "cd test && node ../bin/simplepack.js dev --entry ./index.js"
   },
+  "engineStrict": true,
   "engines": {
     "node": ">=6.x.x",
     "npm": ">=3.x.x"
