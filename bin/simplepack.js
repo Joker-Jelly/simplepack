@@ -28,8 +28,10 @@ const parseSubComArgv = (cmds, sub, opts) => {
 args
   .option('entry', 'The list entries')
   .option('engine', 'The name of workflow engine', 'webpack')
+  .option('config', 'Specifies a different configuration file to pick up')
   .option('compress', 'Whether compress the output code')
   .option('export', 'The name of Component export')
+  .option('extract-css', 'Whether extract css file from bundle', false)
   .option('cli-only', 'Use CLI config only, not merge config file', false)
     .command('dev', 'Start dev server for develop', parseSubComArgv, ['d'])
     .command('publish', 'get dist. file for publish', parseSubComArgv, ['p'])
@@ -47,18 +49,18 @@ let tempOptions = {
 
   entry: argv.opts.entry,
   compress: argv.opts.compress,
-  export: argv.opts.export
+  export: argv.opts.export,
+  extractCss: argv.opts.extractCss
 };
 
 
 // if there is a custom config
-const customConfig = path.join(DIR_PROJECT, 'simplepack.config.js');
+const customConfig = argv.opts.config || path.join(DIR_PROJECT, 'simplepack.config.js');
 
 // cli argv will cover the custom config
 if (!argv.opts.cliOnly && utils.exist(customConfig)) {
   tempOptions = utils.merge(require(customConfig), tempOptions);
 }
-
 
 /**
  * parse options to webpack style
