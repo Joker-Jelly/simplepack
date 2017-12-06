@@ -1,6 +1,6 @@
 {
   "name": "simplepack",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Make pack simple then ever, base on webpack",
   "main": "index.js",
   "bin": {
@@ -44,7 +44,7 @@
     "url-loader": "^0.5.9",
     "vue-loader": "^13.0.4",
     "vue-template-compiler": "^2.4.4",
-    "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.8.2"
+    "webpack": "^3.1.0",
+    "webpack-dev-server": "^2.9.5"
   }
 }
