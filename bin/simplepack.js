@@ -118,10 +118,10 @@ parseOptions().then(options => {
     case 'dev':default:
       const server = processor.dev(options);
 
-      server.listen(PORT, HOST)
+      server.listen(PORT)
         .on('error', () => {
           utils.log.error(`Server port ${PORT} in use, auto change to ${++PORT}`);
-          server.listen(PORT, HOST);
+          server.listen(PORT);
         })
         .once('listening', () => utils.log.info(`Server started at http://${HOST}:${PORT}`));
   };

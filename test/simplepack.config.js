@@ -1,5 +1,6 @@
 module.exports = {
-  entry: {
-    'test/index': './index.js'
+  entry: './index.js',
+  moduleAlias: {
+  	'index2': './index.less'
   }
 }
