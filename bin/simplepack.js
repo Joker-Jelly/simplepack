@@ -30,6 +30,7 @@ args
   .option('engine', 'The name of workflow engine', 'webpack')
   .option('config', 'Specifies a different configuration file to pick up')
   .option('compress', 'Whether compress the output code')
+  .option('not-clear', 'Do not clear the output dir')
   .option('export', 'The name of Component export')
   .option('extract-css', 'Whether extract css file from bundle', false)
   .option('cli-only', 'Use CLI config only, not merge config file', false)
@@ -50,6 +51,7 @@ let tempOptions = {
   entry: argv.opts.entry,
   compress: argv.opts.compress,
   export: argv.opts.export,
+  notClear: argv.opts.notClear,
   extractCss: argv.opts.extractCss
 };
 
@@ -69,31 +71,44 @@ if (!argv.opts.cliOnly && utils.exist(customConfig)) {
  * (glob or path) string  => Array[path,...] => Object{path: path}
  */
 const parseOptions = function(){
-  const globEntry = utils.isString(tempOptions.entry) ? tempOptions.entry : tempOptions.entry[FLAG_MULTI_ENTRY];
+  const stringEntry = utils.isString(tempOptions.entry) ? tempOptions.entry : tempOptions.entry[FLAG_MULTI_ENTRY];
   const vendorEntry = tempOptions.entry[FLAG_VENDOR_ENTRY];
 
-  if(globEntry){
-    return utils.globPromise(globEntry)
-      .then(pathArr => utils.mapKeys(pathArr, utils.removePathExt))
-      .then(parseEntry => {
-        if(vendorEntry){
-          parseEntry.vendor = vendorEntry;
-        }
-        return parseEntry;
-      })
-      .then(parseEntry => {
-        if(utils.isObject(tempOptions.entry)){
-          utils.assign(parseEntry,
-            utils.omit(tempOptions.entry, [FLAG_MULTI_ENTRY, FLAG_VENDOR_ENTRY])
-          );
-        }
+  if (stringEntry) {
 
-        return parseEntry;
-      })
-      .then(parseEntry => {
-        tempOptions.entry = parseEntry;
-        return tempOptions;
-      });
+    if (utils.includes(stringEntry, ',')) {
+      
+      const [key, value] = stringEntry.split(',');
+
+      if (key && value) {
+        tempOptions.entry = {
+          [key.trim()]: value.trim()
+        };
+      }
+    } else {
+      return utils.globPromise(stringEntry)
+        .then(pathArr => utils.mapKeys(pathArr, utils.removePathExt))
+        .then(parseEntry => {
+          if(vendorEntry){
+            parseEntry.vendor = vendorEntry;
+          }
+          return parseEntry;
+        })
+        .then(parseEntry => {
+          if(utils.isObject(tempOptions.entry)){
+            utils.assign(parseEntry,
+              utils.omit(tempOptions.entry, [FLAG_MULTI_ENTRY, FLAG_VENDOR_ENTRY])
+            );
+          }
+
+          return parseEntry;
+        })
+        .then(parseEntry => {
+          tempOptions.entry = parseEntry;
+          return tempOptions;
+        });
+    }
+
   }
 
   return Promise.resolve(tempOptions);
