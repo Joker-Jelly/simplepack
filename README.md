@@ -1,13 +1,15 @@
-# simplepack
+# Simplepack
 > Make pack more simple than ever, base on **Webpack (version 3+)**
 
-Webpack is a good tool, but the complex config file make me confuse when be a beginner.
+Webpack is a good tool, but it need a complex config file to do the build.
 
-`simplepack` want to let you drop the complex config file, use single line command(or minimal config file) to finish the job.
+`simplepack` want to let you drop the complex config file, use single line command (or minimal config file) to finish the job.
 
 - Use out of box, many useful loaders and plugins builtin
 - Extend webpack config ability
 - Made for global use, so just install once for all
+- Buildin with webpack dev server, and HMR
+- Use same config to do develop and publish together
 
 
 
@@ -48,7 +50,7 @@ simplepack publish --entry ./index.js
 ```
 
 
-###Options 
+### Options 
 
 Both dev and publish command has the **same options**
 
@@ -67,11 +69,14 @@ Both dev and publish command has the **same options**
   Options:
 
     -C, --cli-only        Use CLI config only, not merge config file (disabled by default)
-    -c, --compress        Whether compress the output code
+    -C, --compress        Whether compress the output code
+    -c, --config          Specifies a different configuration file to pick up
     -E, --engine [value]  The name of workflow engine (defaults to "webpack")
     -e, --entry           The list entries
     -E, --export          The name of Component export
+    -E, --extract-css     Whether extract css file from bundle (disabled by default)
     -h, --help            Output usage information
+    -n, --not-clear       Do not clear the output dir
     -v, --version         Output the version number
 ```
 
@@ -125,7 +130,6 @@ Other notice:
 - `vendor.js` need to manualy import to your project, use `<script>` tag, [more detail](https://webpack.js.org/plugins/commons-chunk-plugin/#explicit-vendor-chunk)
 
 
-
 ## Usage
 
 After install you can pack in any project, just need single line command.
@@ -153,47 +157,9 @@ Put a js file to your project root, named `simplepack.config.js`
   export: 'AComponent'
 }
 ```
+**Full config support, please see [here](https://github.com/Joker-Jelly/simplepack/blob/master/lib/full-config.js)**
 
 
-
-## Runtime detail
-
-```javascript
-{
-  core: {
-    "webpack": "3.6.0",
-    "webpack-dev-server": "2.8.2"
-  },
-  loader: {
-    "js": {
-      "babel": {
-	    "babel-core": "^6.26.0",
-	    "babel-loader": "^7.1.2",
-        "babel-preset-env": "^1.6.0",
-        "babel-preset-react": "^6.24.1"
-      }
-    },
-    "css": {
-      "css-loader": "^0.28.7",
-      "less-loader": "^2.2.3",
-      "style-loader": "^0.13.1",
-      "extract-text-webpack-plugin": "^3.0.0"
-    },
-    "other": {
-      "file-loader": "^0.11.2",
-      "expose-loader": "^0.7.3",
-      "html-loader": "^0.5.1",
-      "json-loader": "^0.5.7",
-      "raw-loader": "^0.5.1",
-      "url-loader": "^0.5.9"
-    },
-    "vue": {
-      "vue-loader": "^13.0.4",
-	  "vue-template-compiler": "^2.4.4"
-    }
-  }
-}
-```
 
 ## License
 MIT
