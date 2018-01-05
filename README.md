@@ -1,8 +1,6 @@
 # Simplepack
 > Make pack more simple than ever, base on **Webpack (version 3+)**
 
-Webpack is a good tool, but it need a complex config file to do the build.
-
 `simplepack` want to let you drop the complex config file, use single line command (or minimal config file) to finish the job.
 
 - Use out of box, many useful loaders and plugins builtin
