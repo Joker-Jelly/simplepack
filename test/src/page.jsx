@@ -4,6 +4,4 @@ class HelloMessage {
   }
 }
 
-export default {
-  a: '1'
-}
+export default HelloMessage;

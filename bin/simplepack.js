@@ -29,10 +29,10 @@ args
   .option('entry', 'The list entries')
   .option('engine', 'The name of workflow engine', 'webpack')
   .option('config', 'Specifies a different configuration file to pick up')
-  .option('compress', 'Whether compress the output code')
+  .option('not-compress', 'Do not compress the output code')
   .option('not-clear', 'Do not clear the output dir')
   .option('export', 'The name of Component export')
-  .option('extract-css', 'Whether extract css file from bundle', false)
+  .option('extract-css', 'Whether extract css file from bundle')
   .option('cli-only', 'Use CLI config only, not merge config file', false)
     .command('dev', 'Start dev server for develop', parseSubComArgv, ['d'])
     .command('publish', 'get dist. file for publish', parseSubComArgv, ['p'])
@@ -49,10 +49,10 @@ let tempOptions = {
   engine: argv.opts.engine || 'webpack',
 
   entry: argv.opts.entry,
-  compress: argv.opts.compress,
   export: argv.opts.export,
   notClear: argv.opts.notClear,
-  extractCss: argv.opts.extractCss
+  extractCss: argv.opts.extractCss,
+  notCompress: argv.opts.notCompress
 };
 
 
