@@ -1,5 +1,5 @@
 # Simplepack
-> Make pack more simple than ever, base on **Webpack (version 3+)**
+> Make pack more simple than ever, base on **Webpack (version 4+)**
 
 `simplepack` want to let you drop the complex config file, use single line command (or minimal config file) to finish the job.
 
@@ -9,7 +9,7 @@
 - Buildin with webpack dev server, and HMR
 - Use same config to do develop and publish together
 
-
+**`simplepack` support Webpack v4 now !**
 
 ## Ability
 
