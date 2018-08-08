@@ -14,28 +14,45 @@ const FLAG_VENDOR_ENTRY = '@vendor';
 let HOST = '127.0.0.1';
 let PORT = 8080;
 
+const packageJSON = (() => {
+  const filePath = path.join(DIR_PROJECT, 'package.json');
+  if (utils.exist(filePath)) {
+    return require(filePath);
+  }
+
+  return {};
+})();
+
+const defaultMainEntry = './' + path.normalize(packageJSON.module || packageJSON.main);
+
 /*------------------------------------------------------------*/
 /* Get CLI Args */
 
 utils.log.info(`Start parse config file...`);
 
+// default options
 const argv = {};
 const parseSubComArgv = (cmds, sub, opts) => {
   argv.cmd = cmds[0];
-  argv.opts = opts
+  argv.opts = opts;
 };
 
 args
-  .option('entry', 'The list entries')
-  .option('engine', 'The name of workflow engine', 'webpack')
+  .option('entry', 'The list entries', defaultMainEntry)
+  .option('runtime-engine', 'The name of workflow engine', 'webpack')
   .option('config', 'Specifies a different configuration file to pick up')
   .option('not-compress', 'Do not compress the output code')
   .option('not-clear', 'Do not clear the output dir')
-  .option('export', 'The name of Component export')
+  .option('module-export', 'The name of module export, using in write a component')
   .option('extract-css', 'Whether extract css file from bundle')
+  .option('include-nodemodules', 'Whether include node modules folder', false)
   .option('cli-only', 'Use CLI config only, not merge config file', false)
     .command('dev', 'Start dev server for develop', parseSubComArgv, ['d'])
     .command('publish', 'get dist. file for publish', parseSubComArgv, ['p'])
+
+if (process.argv.length <= 2) {
+  process.argv.push('-h')
+}    
 
 args.parse(process.argv);
 
@@ -46,13 +63,14 @@ args.parse(process.argv);
 let tempOptions = {
 
   // webpack or rollup
-  engine: argv.opts.engine || 'webpack',
+  engine: argv.opts.runtimeEngine || 'webpack',
 
   entry: argv.opts.entry,
-  export: argv.opts.export,
+  export: argv.opts.moduleExport,
   notClear: argv.opts.notClear,
   extractCss: argv.opts.extractCss,
-  notCompress: argv.opts.notCompress
+  notCompress: argv.opts.notCompress,
+  includeNodemodules: argv.opts.includeNodemodules
 };
 
 
@@ -61,7 +79,7 @@ const customConfig = argv.opts.config || path.join(DIR_PROJECT, 'simplepack.conf
 
 // cli argv will cover the custom config
 if (!argv.opts.cliOnly && utils.exist(customConfig)) {
-  tempOptions = utils.merge(require(customConfig), tempOptions);
+  tempOptions = utils.merge(tempOptions, require(customConfig));
 }
 
 /**
