@@ -7,6 +7,8 @@ const args  = require('args');
 const DIR_PROJECT    = global.DIR_PROJECT = process.cwd();
 const DIR_SIMPLEPACK = global.DIR_SIMPLEPACK = path.join(__dirname, '../');
 
+const BAD_DEFAULT_ENTRY = './index.js';
+
 const FLAG_MULTI_ENTRY = '@multi';
 const FLAG_VENDOR_ENTRY = '@vendor';
 
@@ -18,12 +20,15 @@ const packageJSON = (() => {
   const filePath = path.join(DIR_PROJECT, 'package.json');
   if (utils.exist(filePath)) {
     return require(filePath);
+  } else {
+    utils.log.error('Should start in project root');
   }
-
-  return {};
 })();
 
-const defaultMainEntry = './' + path.normalize(packageJSON.module || packageJSON.main);
+const defaultMainEntry = 
+  packageJSON ? 
+    './' + path.normalize(packageJSON.module || packageJSON.main) : 
+    BAD_DEFAULT_ENTRY;
 
 /*------------------------------------------------------------*/
 /* Get CLI Args */
@@ -39,6 +44,7 @@ const parseSubComArgv = (cmds, sub, opts) => {
 
 args
   .option('entry', 'The list entries', defaultMainEntry)
+  .option('port', 'The port that server should listen', PORT)
   .option('runtime-engine', 'The name of workflow engine', 'webpack')
   .option('config', 'Specifies a different configuration file to pick up')
   .option('not-compress', 'Do not compress the output code')
@@ -56,8 +62,16 @@ if (process.argv.length <= 2) {
 
 args.parse(process.argv);
 
+if (!utils.isObject(argv.opts)) {
+  utils.log.error(`Must specify a certain command [dev/publish], use 'simplepack -h' to get more information`);
+  process.exit(1);
+}
+
 /*------------------------------------------------------------*/
 /* Parse Options */
+
+// override the default port
+PORT = argv.opts.port;
 
 // default options
 let tempOptions = {
@@ -72,7 +86,6 @@ let tempOptions = {
   notCompress: argv.opts.notCompress,
   includeNodemodules: argv.opts.includeNodemodules
 };
-
 
 // if there is a custom config
 const customConfig = argv.opts.config || path.join(DIR_PROJECT, 'simplepack.config.js');
