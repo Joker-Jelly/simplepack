@@ -51,7 +51,6 @@ args
   .option('not-clear', 'Do not clear the output dir')
   .option('module-export', 'The name of module export, using in write a component')
   .option('extract-css', 'Whether extract css file from bundle')
-  .option('include-nodemodules', 'Whether include node modules folder', false)
   .option('cli-only', 'Use CLI config only, not merge config file', false)
     .command('dev', 'Start dev server for develop', parseSubComArgv, ['d'])
     .command('publish', 'get dist. file for publish', parseSubComArgv, ['p'])
@@ -83,8 +82,7 @@ let tempOptions = {
   export: argv.opts.moduleExport,
   notClear: argv.opts.notClear,
   extractCss: argv.opts.extractCss,
-  notCompress: argv.opts.notCompress,
-  includeNodemodules: argv.opts.includeNodemodules
+  notCompress: argv.opts.notCompress
 };
 
 // if there is a custom config
