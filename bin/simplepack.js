@@ -148,7 +148,7 @@ const parseOptions = function(){
 
 parseOptions().then(options => {
 
-  utils.log.info(`Using config file \n ${utils.formatJSONString(options)}`);
+  utils.log.info(`Using config file \n\n${utils.formatJSONString(options)}\n`);
 
   // specific engine's processor
   const processor = require(`../lib/${options.engine}/processor`);
