@@ -43,7 +43,7 @@ const parseSubComArgv = (cmds, sub, opts) => {
 };
 
 args
-  .option('entry', 'The list entries', defaultMainEntry)
+  .option('entry', 'The list entries')
   .option('port', 'The port that server should listen', PORT)
   .option('runtime-engine', 'The name of workflow engine', 'webpack')
   .option('config', 'Specifies a different configuration file to pick up')
@@ -90,7 +90,9 @@ const customConfig = argv.opts.config || path.join(DIR_PROJECT, 'simplepack.conf
 
 // cli argv will cover the custom config
 if (!argv.opts.cliOnly && utils.exist(customConfig)) {
-  tempOptions = utils.merge(tempOptions, require(customConfig));
+  tempOptions = utils.merge({
+    entry: defaultMainEntry
+  }, require(customConfig), tempOptions);
 }
 
 /**
