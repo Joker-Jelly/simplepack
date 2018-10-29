@@ -35,7 +35,7 @@
     "file-loader": "^1.1.11",
     "glob": "^7.1.2",
     "html-loader": "^0.5.5",
-    "less": "^2.7.2",
+    "less": "^3.8.1",
     "less-loader": "^4.1.0",
     "lodash": "^4.17.10",
     "mini-css-extract-plugin": "^0.4.1",
@@ -48,6 +48,7 @@
     "vue-loader": "^14.2.3",
     "vue-template-compiler": "^2.5.17",
     "webpack": "^4.16.5",
+    "webpack-bundle-analyzer": "^3.0.2",
     "webpack-dev-server": "^3.1.5"
   }
 }

@@ -461,15 +461,18 @@
     },
     "asap": {
       "version": "2.0.6",
-      "resolved": "http://registry.npm.taobao.org/asap/download/asap-2.0.6.tgz",
+      "resolved": "http://registry.npm.alibaba-inc.com/asap/download/asap-2.0.6.tgz",
       "integrity": "sha1-5QNHYR1+aQlDIIu9r+vLwvuGbUY=",
       "optional": true
     },
     "asn1": {
-      "version": "0.2.3",
-      "resolved": "http://registry.npm.taobao.org/asn1/download/asn1-0.2.3.tgz",
-      "integrity": "sha1-2sh4dxPJlmhJ/IGAd36+nB3fO4Y=",
-      "optional": true
+      "version": "0.2.4",
+      "resolved": "http://registry.npm.alibaba-inc.com/asn1/download/asn1-0.2.4.tgz",
+      "integrity": "sha1-jSR136tVO7M+d7VOWeiAu4ziMTY=",
+      "optional": true,
+      "requires": {
+        "safer-buffer": "2.1.2"
+      }
     },
     "asn1.js": {
       "version": "4.10.1",
@@ -505,10 +508,9 @@
       }
     },
     "assert-plus": {
-      "version": "0.2.0",
-      "resolved": "http://registry.npm.taobao.org/assert-plus/download/assert-plus-0.2.0.tgz",
-      "integrity": "sha1-104bh+ev/A24qttwIfP+SBAasjQ=",
-      "optional": true
+      "version": "1.0.0",
+      "resolved": "http://registry.npm.alibaba-inc.com/assert-plus/download/assert-plus-1.0.0.tgz",
+      "integrity": "sha1-8S4PPF13sLHN2RRpQuTpbB5N1SU="
     },
     "assign-symbols": {
       "version": "1.0.0",
@@ -530,9 +532,14 @@
       "resolved": "http://registry.npm.taobao.org/async-each/download/async-each-1.0.1.tgz",
       "integrity": "sha1-GdOGodntxufByF04iu28xW0zYC0="
     },
+    "async-limiter": {
+      "version": "1.0.0",
+      "resolved": "http://registry.npm.alibaba-inc.com/async-limiter/download/async-limiter-1.0.0.tgz",
+      "integrity": "sha1-ePrtjD0HSrgfIrTphdeehzj3IPg="
+    },
     "asynckit": {
       "version": "0.4.0",
-      "resolved": "http://registry.npm.taobao.org/asynckit/download/asynckit-0.4.0.tgz",
+      "resolved": "http://registry.npm.alibaba-inc.com/asynckit/download/asynckit-0.4.0.tgz",
       "integrity": "sha1-x57Zf380y48robyXkLzDZkdLS3k=",
       "optional": true
     },
@@ -603,15 +610,15 @@
       }
     },
     "aws-sign2": {
-      "version": "0.6.0",
-      "resolved": "http://registry.npm.taobao.org/aws-sign2/download/aws-sign2-0.6.0.tgz",
-      "integrity": "sha1-FDQt0428yU0OW4fXY81jYSwOeU8=",
+      "version": "0.7.0",
+      "resolved": "http://registry.npm.alibaba-inc.com/aws-sign2/download/aws-sign2-0.7.0.tgz",
+      "integrity": "sha1-tG6JCTSpWR8tL2+G1+ap8bP+dqg=",
       "optional": true
     },
     "aws4": {
-      "version": "1.6.0",
-      "resolved": "http://registry.npm.taobao.org/aws4/download/aws4-1.6.0.tgz",
-      "integrity": "sha1-g+9cqGCysy5KDe7e6MdxudtXRx4=",
+      "version": "1.8.0",
+      "resolved": "http://registry.npm.alibaba-inc.com/aws4/download/aws4-1.8.0.tgz",
+      "integrity": "sha1-8OAD2cqef1nHpQiUXXsu+aBKVC8=",
       "optional": true
     },
     "babel-code-frame": {
@@ -1497,12 +1504,23 @@
       "integrity": "sha1-3DQxT05nkxgJP8dgJyUl+UvyXBY="
     },
     "bcrypt-pbkdf": {
-      "version": "1.0.1",
-      "resolved": "http://registry.npm.taobao.org/bcrypt-pbkdf/download/bcrypt-pbkdf-1.0.1.tgz",
-      "integrity": "sha1-Y7xdy2EzG5K8Bf1SiVPDNGKgb40=",
+      "version": "1.0.2",
+      "resolved": "http://registry.npm.alibaba-inc.com/bcrypt-pbkdf/download/bcrypt-pbkdf-1.0.2.tgz",
+      "integrity": "sha1-pDAdOJtqQ/m2f/PKEaP2Y342Dp4=",
       "optional": true,
       "requires": {
         "tweetnacl": "0.14.5"
+      }
+    },
+    "bfj": {
+      "version": "6.1.1",
+      "resolved": "http://registry.npm.alibaba-inc.com/bfj/download/bfj-6.1.1.tgz",
+      "integrity": "sha1-BaO3eE+9cs+jwi5WAC75kzZRbEg=",
+      "requires": {
+        "bluebird": "3.5.1",
+        "check-types": "7.4.0",
+        "hoopy": "0.1.4",
+        "tryer": "1.0.1"
       }
     },
     "big.js": {
@@ -1566,14 +1584,6 @@
       "version": "1.0.0",
       "resolved": "http://registry.npm.alibaba-inc.com/boolbase/download/boolbase-1.0.0.tgz",
       "integrity": "sha1-aN/1++YMUes3cl6p4+0xDcwed24="
-    },
-    "boom": {
-      "version": "2.10.1",
-      "resolved": "http://registry.npm.taobao.org/boom/download/boom-2.10.1.tgz",
-      "integrity": "sha1-OciRjO/1eZ+D+UkqhI9iWt0Mdm8=",
-      "requires": {
-        "hoek": "2.16.3"
-      }
     },
     "brace-expansion": {
       "version": "1.1.8",
@@ -1858,7 +1868,7 @@
     },
     "caseless": {
       "version": "0.12.0",
-      "resolved": "http://registry.npm.taobao.org/caseless/download/caseless-0.12.0.tgz",
+      "resolved": "http://registry.npm.alibaba-inc.com/caseless/download/caseless-0.12.0.tgz",
       "integrity": "sha1-G2gcIf+EAzyCZUMJBolCDRhxUdw=",
       "optional": true
     },
@@ -1871,6 +1881,11 @@
         "escape-string-regexp": "1.0.5",
         "supports-color": "4.5.0"
       }
+    },
+    "check-types": {
+      "version": "7.4.0",
+      "resolved": "http://registry.npm.alibaba-inc.com/check-types/download/check-types-7.4.0.tgz",
+      "integrity": "sha1-A3jsG5YW7HH3dJMaPGUW+tjBUvQ="
     },
     "chokidar": {
       "version": "2.0.4",
@@ -2495,7 +2510,7 @@
     },
     "co": {
       "version": "4.6.0",
-      "resolved": "http://registry.npm.taobao.org/co/download/co-4.6.0.tgz",
+      "resolved": "http://registry.npm.alibaba-inc.com/co/download/co-4.6.0.tgz",
       "integrity": "sha1-bqa989hTrlTMuOR7+gvz+QMfsYQ=",
       "optional": true
     },
@@ -2568,9 +2583,10 @@
       "integrity": "sha1-FopHAXVran9RoSzgyXv6KMCE7WM="
     },
     "combined-stream": {
-      "version": "1.0.5",
-      "resolved": "http://registry.npm.taobao.org/combined-stream/download/combined-stream-1.0.5.tgz",
-      "integrity": "sha1-k4NwpXtKUd6ix3wV1cX9+JUWQAk=",
+      "version": "1.0.7",
+      "resolved": "http://registry.npm.alibaba-inc.com/combined-stream/download/combined-stream-1.0.7.tgz",
+      "integrity": "sha1-LR0kMXr7ir6V1tLAsHtXgTU52Cg=",
+      "optional": true,
       "requires": {
         "delayed-stream": "1.0.0"
       }
@@ -2799,15 +2815,6 @@
         "lru-cache": "4.1.1",
         "shebang-command": "1.2.0",
         "which": "1.3.1"
-      }
-    },
-    "cryptiles": {
-      "version": "2.0.5",
-      "resolved": "http://registry.npm.taobao.org/cryptiles/download/cryptiles-2.0.5.tgz",
-      "integrity": "sha1-O9/s3GCBR8HGcgL6KR59ylnqo7g=",
-      "optional": true,
-      "requires": {
-        "boom": "2.10.1"
       }
     },
     "crypto-browserify": {
@@ -3639,19 +3646,11 @@
     },
     "dashdash": {
       "version": "1.14.1",
-      "resolved": "http://registry.npm.taobao.org/dashdash/download/dashdash-1.14.1.tgz",
+      "resolved": "http://registry.npm.alibaba-inc.com/dashdash/download/dashdash-1.14.1.tgz",
       "integrity": "sha1-hTz6D3y+L+1d4gMmuN1YEDX24vA=",
       "optional": true,
       "requires": {
         "assert-plus": "1.0.0"
-      },
-      "dependencies": {
-        "assert-plus": {
-          "version": "1.0.0",
-          "resolved": "http://registry.npm.taobao.org/assert-plus/download/assert-plus-1.0.0.tgz",
-          "integrity": "sha1-8S4PPF13sLHN2RRpQuTpbB5N1SU=",
-          "optional": true
-        }
       }
     },
     "date-now": {
@@ -3763,7 +3762,7 @@
     },
     "delayed-stream": {
       "version": "1.0.0",
-      "resolved": "http://registry.npm.taobao.org/delayed-stream/download/delayed-stream-1.0.0.tgz",
+      "resolved": "http://registry.npm.alibaba-inc.com/delayed-stream/download/delayed-stream-1.0.0.tgz",
       "integrity": "sha1-3zrhmayt+31ECqrgsp4icrJOxhk="
     },
     "depd": {
@@ -3873,6 +3872,11 @@
         "is-obj": "1.0.1"
       }
     },
+    "duplexer": {
+      "version": "0.1.1",
+      "resolved": "http://registry.npm.alibaba-inc.com/duplexer/download/duplexer-0.1.1.tgz",
+      "integrity": "sha1-rOb/gIwc5mtX0ev5eXessCM0z8E="
+    },
     "duplexify": {
       "version": "3.6.0",
       "resolved": "http://registry.npm.alibaba-inc.com/duplexify/download/duplexify-3.6.0.tgz",
@@ -3885,18 +3889,24 @@
       }
     },
     "ecc-jsbn": {
-      "version": "0.1.1",
-      "resolved": "http://registry.npm.taobao.org/ecc-jsbn/download/ecc-jsbn-0.1.1.tgz",
-      "integrity": "sha1-D8c6ntXw1Tw4GTOYUj735UN3dQU=",
+      "version": "0.1.2",
+      "resolved": "http://registry.npm.alibaba-inc.com/ecc-jsbn/download/ecc-jsbn-0.1.2.tgz",
+      "integrity": "sha1-OoOpBOVDUyh4dMVkt1SThoSamMk=",
       "optional": true,
       "requires": {
-        "jsbn": "0.1.1"
+        "jsbn": "0.1.1",
+        "safer-buffer": "2.1.2"
       }
     },
     "ee-first": {
       "version": "1.1.1",
       "resolved": "http://registry.npm.taobao.org/ee-first/download/ee-first-1.1.1.tgz",
       "integrity": "sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0="
+    },
+    "ejs": {
+      "version": "2.6.1",
+      "resolved": "http://registry.npm.alibaba-inc.com/ejs/download/ejs-2.6.1.tgz",
+      "integrity": "sha1-SY7A1JVlWrxvI81hho2SZGQHGqA="
     },
     "electron-to-chromium": {
       "version": "1.3.28",
@@ -4172,9 +4182,9 @@
       }
     },
     "extend": {
-      "version": "3.0.1",
-      "resolved": "http://registry.npm.taobao.org/extend/download/extend-3.0.1.tgz",
-      "integrity": "sha1-p1Xqe8Gt/MWjHOfnYtuq3F5jZEQ=",
+      "version": "3.0.2",
+      "resolved": "http://registry.npm.alibaba-inc.com/extend/download/extend-3.0.2.tgz",
+      "integrity": "sha1-+LETa0Bx+9jrFAr/hYsQGewpFfo=",
       "optional": true
     },
     "extend-shallow": {
@@ -4262,7 +4272,7 @@
     },
     "extsprintf": {
       "version": "1.3.0",
-      "resolved": "http://registry.npm.taobao.org/extsprintf/download/extsprintf-1.3.0.tgz",
+      "resolved": "http://registry.npm.alibaba-inc.com/extsprintf/download/extsprintf-1.3.0.tgz",
       "integrity": "sha1-lpGEQOMEGnpBT4xS48V06zw+HgU="
     },
     "fast-deep-equal": {
@@ -4323,6 +4333,11 @@
           }
         }
       }
+    },
+    "filesize": {
+      "version": "3.6.1",
+      "resolved": "http://registry.npm.alibaba-inc.com/filesize/download/filesize-3.6.1.tgz",
+      "integrity": "sha1-CQuz7gG2+AGoqL6Z0xcQs0Irsxc="
     },
     "fill-range": {
       "version": "4.0.0",
@@ -4421,19 +4436,30 @@
     },
     "forever-agent": {
       "version": "0.6.1",
-      "resolved": "http://registry.npm.taobao.org/forever-agent/download/forever-agent-0.6.1.tgz",
+      "resolved": "http://registry.npm.alibaba-inc.com/forever-agent/download/forever-agent-0.6.1.tgz",
       "integrity": "sha1-+8cfDEGt6zf5bFd60e1C2P2sypE=",
       "optional": true
     },
     "form-data": {
-      "version": "2.1.4",
-      "resolved": "http://registry.npm.taobao.org/form-data/download/form-data-2.1.4.tgz",
-      "integrity": "sha1-M8GDrPGTJ27KqYFDpp6Uv+4XUNE=",
+      "version": "2.3.2",
+      "resolved": "http://registry.npm.alibaba-inc.com/form-data/download/form-data-2.3.2.tgz",
+      "integrity": "sha1-SXBJi+YEwgwAXU9cI67NIda0kJk=",
       "optional": true,
       "requires": {
         "asynckit": "0.4.0",
-        "combined-stream": "1.0.5",
+        "combined-stream": "1.0.6",
         "mime-types": "2.1.17"
+      },
+      "dependencies": {
+        "combined-stream": {
+          "version": "1.0.6",
+          "resolved": "http://registry.npm.alibaba-inc.com/combined-stream/download/combined-stream-1.0.6.tgz",
+          "integrity": "sha1-cj599ugBrFYTETp+RFqbactjKBg=",
+          "optional": true,
+          "requires": {
+            "delayed-stream": "1.0.0"
+          }
+        }
       }
     },
     "forwarded": {
@@ -4506,19 +4532,11 @@
     },
     "getpass": {
       "version": "0.1.7",
-      "resolved": "http://registry.npm.taobao.org/getpass/download/getpass-0.1.7.tgz",
+      "resolved": "http://registry.npm.alibaba-inc.com/getpass/download/getpass-0.1.7.tgz",
       "integrity": "sha1-Xv+OPmhNVprkyysSgmBOi6YhSfo=",
       "optional": true,
       "requires": {
         "assert-plus": "1.0.0"
-      },
-      "dependencies": {
-        "assert-plus": {
-          "version": "1.0.0",
-          "resolved": "http://registry.npm.taobao.org/assert-plus/download/assert-plus-1.0.0.tgz",
-          "integrity": "sha1-8S4PPF13sLHN2RRpQuTpbB5N1SU=",
-          "optional": true
-        }
       }
     },
     "glob": {
@@ -4582,35 +4600,46 @@
       "resolved": "http://registry.npm.taobao.org/graceful-fs/download/graceful-fs-4.1.11.tgz",
       "integrity": "sha1-Dovf5NHduIVNZOBOp8AOKgJuVlg="
     },
+    "gzip-size": {
+      "version": "5.0.0",
+      "resolved": "http://registry.npm.alibaba-inc.com/gzip-size/download/gzip-size-5.0.0.tgz",
+      "integrity": "sha1-pV7NmSIvTEj9jAHGJc47NJ0KDoA=",
+      "requires": {
+        "duplexer": "0.1.1",
+        "pify": "3.0.0"
+      }
+    },
     "handle-thing": {
       "version": "1.2.5",
       "resolved": "http://registry.npm.taobao.org/handle-thing/download/handle-thing-1.2.5.tgz",
       "integrity": "sha1-/Xqtcmvxpf0W38KbL3pmAdJxOcQ="
     },
     "har-schema": {
-      "version": "1.0.5",
-      "resolved": "http://registry.npm.taobao.org/har-schema/download/har-schema-1.0.5.tgz",
-      "integrity": "sha1-0mMTX0MwfALGAq/I/pWXDAFRNp4=",
+      "version": "2.0.0",
+      "resolved": "http://registry.npm.alibaba-inc.com/har-schema/download/har-schema-2.0.0.tgz",
+      "integrity": "sha1-qUwiJOvKwEeCoNkDVSHyRzW37JI=",
       "optional": true
     },
     "har-validator": {
-      "version": "4.2.1",
-      "resolved": "http://registry.npm.taobao.org/har-validator/download/har-validator-4.2.1.tgz",
-      "integrity": "sha1-M0gdDxu/9gDdID11gSpqX7oALio=",
+      "version": "5.1.0",
+      "resolved": "http://registry.npm.alibaba-inc.com/har-validator/download/har-validator-5.1.0.tgz",
+      "integrity": "sha1-RGV/VoiiLP1LckhugbOj+xF0LCk=",
       "optional": true,
       "requires": {
-        "ajv": "4.11.8",
-        "har-schema": "1.0.5"
+        "ajv": "5.5.2",
+        "har-schema": "2.0.0"
       },
       "dependencies": {
         "ajv": {
-          "version": "4.11.8",
-          "resolved": "http://registry.npm.taobao.org/ajv/download/ajv-4.11.8.tgz",
-          "integrity": "sha1-gv+wKynmYq5TvcIK8VlHcGc5xTY=",
+          "version": "5.5.2",
+          "resolved": "http://registry.npm.alibaba-inc.com/ajv/download/ajv-5.5.2.tgz",
+          "integrity": "sha1-c7Xuyj+rZT49P5Qis0GtQiBdyWU=",
           "optional": true,
           "requires": {
             "co": "4.6.0",
-            "json-stable-stringify": "1.0.1"
+            "fast-deep-equal": "1.0.0",
+            "fast-json-stable-stringify": "2.0.0",
+            "json-schema-traverse": "0.3.1"
           }
         }
       }
@@ -4720,18 +4749,6 @@
         }
       }
     },
-    "hawk": {
-      "version": "3.1.3",
-      "resolved": "http://registry.npm.taobao.org/hawk/download/hawk-3.1.3.tgz",
-      "integrity": "sha1-B4REvXwWQLD+VA0sm3PVlnjo4cQ=",
-      "optional": true,
-      "requires": {
-        "boom": "2.10.1",
-        "cryptiles": "2.0.5",
-        "hoek": "2.16.3",
-        "sntp": "1.0.9"
-      }
-    },
     "he": {
       "version": "1.1.1",
       "resolved": "http://registry.npm.taobao.org/he/download/he-1.1.1.tgz",
@@ -4752,11 +4769,6 @@
         "minimalistic-crypto-utils": "1.0.1"
       }
     },
-    "hoek": {
-      "version": "2.16.3",
-      "resolved": "http://registry.npm.taobao.org/hoek/download/hoek-2.16.3.tgz",
-      "integrity": "sha1-ILt0A9POo5jpHcRxCo/xuCdKJe0="
-    },
     "home-or-tmp": {
       "version": "2.0.0",
       "resolved": "http://registry.npm.taobao.org/home-or-tmp/download/home-or-tmp-2.0.0.tgz",
@@ -4765,6 +4777,11 @@
         "os-homedir": "1.0.2",
         "os-tmpdir": "1.0.2"
       }
+    },
+    "hoopy": {
+      "version": "0.1.4",
+      "resolved": "http://registry.npm.alibaba-inc.com/hoopy/download/hoopy-0.1.4.tgz",
+      "integrity": "sha1-YJIH1mEQADOpqUAq096mdzgcGx0="
     },
     "hosted-git-info": {
       "version": "2.7.1",
@@ -4899,14 +4916,14 @@
       }
     },
     "http-signature": {
-      "version": "1.1.1",
-      "resolved": "http://registry.npm.taobao.org/http-signature/download/http-signature-1.1.1.tgz",
-      "integrity": "sha1-33LiZwZs0Kxn+3at+OE0qPvPkb8=",
+      "version": "1.2.0",
+      "resolved": "http://registry.npm.alibaba-inc.com/http-signature/download/http-signature-1.2.0.tgz",
+      "integrity": "sha1-muzZJRFHcvPZW2WmCruPfBj7rOE=",
       "optional": true,
       "requires": {
-        "assert-plus": "0.2.0",
+        "assert-plus": "1.0.0",
         "jsprim": "1.4.1",
-        "sshpk": "1.13.1"
+        "sshpk": "1.14.2"
       }
     },
     "https-browserify": {
@@ -4971,7 +4988,7 @@
     },
     "image-size": {
       "version": "0.5.5",
-      "resolved": "http://registry.npm.taobao.org/image-size/download/image-size-0.5.5.tgz",
+      "resolved": "http://registry.npm.alibaba-inc.com/image-size/download/image-size-0.5.5.tgz",
       "integrity": "sha1-Cd/Uq50g4p6xw+gLiZA3jfnjy5w=",
       "optional": true
     },
@@ -5293,7 +5310,7 @@
     },
     "is-typedarray": {
       "version": "1.0.0",
-      "resolved": "http://registry.npm.taobao.org/is-typedarray/download/is-typedarray-1.0.0.tgz",
+      "resolved": "http://registry.npm.alibaba-inc.com/is-typedarray/download/is-typedarray-1.0.0.tgz",
       "integrity": "sha1-5HnICFjfDBsR3dppQPlgEfzaSpo=",
       "optional": true
     },
@@ -5329,7 +5346,7 @@
     },
     "isstream": {
       "version": "0.1.2",
-      "resolved": "http://registry.npm.taobao.org/isstream/download/isstream-0.1.2.tgz",
+      "resolved": "http://registry.npm.alibaba-inc.com/isstream/download/isstream-0.1.2.tgz",
       "integrity": "sha1-R+Y/evVa+m+S4VAOaQ64uFKcCZo=",
       "optional": true
     },
@@ -5354,7 +5371,7 @@
     },
     "jsbn": {
       "version": "0.1.1",
-      "resolved": "http://registry.npm.taobao.org/jsbn/download/jsbn-0.1.1.tgz",
+      "resolved": "http://registry.npm.alibaba-inc.com/jsbn/download/jsbn-0.1.1.tgz",
       "integrity": "sha1-peZUwuWi3rXyAdls77yoDA7y9RM=",
       "optional": true
     },
@@ -5370,7 +5387,7 @@
     },
     "json-schema": {
       "version": "0.2.3",
-      "resolved": "http://registry.npm.taobao.org/json-schema/download/json-schema-0.2.3.tgz",
+      "resolved": "http://registry.npm.alibaba-inc.com/json-schema/download/json-schema-0.2.3.tgz",
       "integrity": "sha1-tIDIkuWaLwWVTOcnvT8qTogvnhM=",
       "optional": true
     },
@@ -5379,18 +5396,9 @@
       "resolved": "http://registry.npm.taobao.org/json-schema-traverse/download/json-schema-traverse-0.3.1.tgz",
       "integrity": "sha1-NJptRMU6Ud6JtAgFxdXlm0F9M0A="
     },
-    "json-stable-stringify": {
-      "version": "1.0.1",
-      "resolved": "http://registry.npm.taobao.org/json-stable-stringify/download/json-stable-stringify-1.0.1.tgz",
-      "integrity": "sha1-mnWdOcXy/1A/1TAGRu1EX4jE+a8=",
-      "optional": true,
-      "requires": {
-        "jsonify": "0.0.0"
-      }
-    },
     "json-stringify-safe": {
       "version": "5.0.1",
-      "resolved": "http://registry.npm.taobao.org/json-stringify-safe/download/json-stringify-safe-5.0.1.tgz",
+      "resolved": "http://registry.npm.alibaba-inc.com/json-stringify-safe/download/json-stringify-safe-5.0.1.tgz",
       "integrity": "sha1-Epai1Y/UXxmg9s4B1lcB4sc1tus=",
       "optional": true
     },
@@ -5404,15 +5412,9 @@
       "resolved": "http://registry.npm.taobao.org/json5/download/json5-0.5.1.tgz",
       "integrity": "sha1-Hq3nrMASA0rYTiOWdn6tn6VJWCE="
     },
-    "jsonify": {
-      "version": "0.0.0",
-      "resolved": "http://registry.npm.taobao.org/jsonify/download/jsonify-0.0.0.tgz",
-      "integrity": "sha1-LHS27kHZPKUbe1qu6PUDYx0lKnM=",
-      "optional": true
-    },
     "jsprim": {
       "version": "1.4.1",
-      "resolved": "http://registry.npm.taobao.org/jsprim/download/jsprim-1.4.1.tgz",
+      "resolved": "http://registry.npm.alibaba-inc.com/jsprim/download/jsprim-1.4.1.tgz",
       "integrity": "sha1-MT5mvB5cwG5Di8G3SZwuXFastqI=",
       "optional": true,
       "requires": {
@@ -5420,14 +5422,6 @@
         "extsprintf": "1.3.0",
         "json-schema": "0.2.3",
         "verror": "1.10.0"
-      },
-      "dependencies": {
-        "assert-plus": {
-          "version": "1.0.0",
-          "resolved": "http://registry.npm.taobao.org/assert-plus/download/assert-plus-1.0.0.tgz",
-          "integrity": "sha1-8S4PPF13sLHN2RRpQuTpbB5N1SU=",
-          "optional": true
-        }
       }
     },
     "killable": {
@@ -5461,18 +5455,32 @@
       }
     },
     "less": {
-      "version": "2.7.3",
-      "resolved": "http://registry.npm.taobao.org/less/download/less-2.7.3.tgz",
-      "integrity": "sha1-zBJg9RyQCp7A2R+2mYE54CUHtjs=",
+      "version": "3.8.1",
+      "resolved": "http://registry.npm.alibaba-inc.com/less/download/less-3.8.1.tgz",
+      "integrity": "sha1-8xdYWY71oZMN1MrvqeQ0BkHnHh0=",
       "requires": {
+        "clone": "2.1.2",
         "errno": "0.1.4",
         "graceful-fs": "4.1.11",
         "image-size": "0.5.5",
         "mime": "1.6.0",
         "mkdirp": "0.5.1",
         "promise": "7.3.1",
-        "request": "2.81.0",
-        "source-map": "0.5.7"
+        "request": "2.88.0",
+        "source-map": "0.6.1"
+      },
+      "dependencies": {
+        "clone": {
+          "version": "2.1.2",
+          "resolved": "http://registry.npm.alibaba-inc.com/clone/download/clone-2.1.2.tgz",
+          "integrity": "sha1-G39Ln1kfHo+DZwQBYANFoCiHQ18="
+        },
+        "source-map": {
+          "version": "0.6.1",
+          "resolved": "http://registry.npm.alibaba-inc.com/source-map/download/source-map-0.6.1.tgz",
+          "integrity": "sha1-dHIq8y6WFOnCh6jQu95IteLxomM=",
+          "optional": true
+        }
       }
     },
     "less-loader": {
@@ -5763,7 +5771,7 @@
     },
     "mime": {
       "version": "1.6.0",
-      "resolved": "http://registry.npm.taobao.org/mime/download/mime-1.6.0.tgz",
+      "resolved": "http://registry.npm.alibaba-inc.com/mime/download/mime-1.6.0.tgz",
       "integrity": "sha1-Ms2eXGRVO9WNGaVor0Uqz/BJgbE=",
       "optional": true
     },
@@ -6058,9 +6066,9 @@
       "integrity": "sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0="
     },
     "oauth-sign": {
-      "version": "0.8.2",
-      "resolved": "http://registry.npm.taobao.org/oauth-sign/download/oauth-sign-0.8.2.tgz",
-      "integrity": "sha1-Rqarfwrq2N6unsBWV4C31O/rnUM=",
+      "version": "0.9.0",
+      "resolved": "http://registry.npm.alibaba-inc.com/oauth-sign/download/oauth-sign-0.9.0.tgz",
+      "integrity": "sha1-R6ewFrqmi1+g7PPe4IqFxnmsZFU=",
       "optional": true
     },
     "object-assign": {
@@ -6168,6 +6176,11 @@
       "requires": {
         "wrappy": "1.0.2"
       }
+    },
+    "opener": {
+      "version": "1.5.1",
+      "resolved": "http://registry.npm.alibaba-inc.com/opener/download/opener-1.5.1.tgz",
+      "integrity": "sha1-bS8Od/GgrwAyrKcWwsH7uOfoq+0="
     },
     "opn": {
       "version": "5.3.0",
@@ -6457,9 +6470,9 @@
       }
     },
     "performance-now": {
-      "version": "0.2.0",
-      "resolved": "http://registry.npm.taobao.org/performance-now/download/performance-now-0.2.0.tgz",
-      "integrity": "sha1-M+8wxcd9TqIcWlOGnZG1bY8lVeU=",
+      "version": "2.1.0",
+      "resolved": "http://registry.npm.alibaba-inc.com/performance-now/download/performance-now-2.1.0.tgz",
+      "integrity": "sha1-Ywn04OX6kT7BxpMHrjZLSzd8nns=",
       "optional": true
     },
     "pify": {
@@ -7487,6 +7500,22 @@
       "resolved": "http://registry.npm.alibaba-inc.com/prettier/download/prettier-1.14.0.tgz",
       "integrity": "sha1-hHwjVSIDX9mIEA8fQ88gp9JPk3I="
     },
+    "prettyjson": {
+      "version": "1.2.1",
+      "resolved": "http://registry.npm.alibaba-inc.com/prettyjson/download/prettyjson-1.2.1.tgz",
+      "integrity": "sha1-/P+rQdGcq0365eV15kJGYZsS0ok=",
+      "requires": {
+        "colors": "1.1.2",
+        "minimist": "1.2.0"
+      },
+      "dependencies": {
+        "minimist": {
+          "version": "1.2.0",
+          "resolved": "http://registry.npm.alibaba-inc.com/minimist/download/minimist-1.2.0.tgz",
+          "integrity": "sha1-o1AIsg9BOD7sH7kU9M1d95omQoQ="
+        }
+      }
+    },
     "private": {
       "version": "0.1.8",
       "resolved": "http://registry.npm.taobao.org/private/download/private-0.1.8.tgz",
@@ -7504,7 +7533,7 @@
     },
     "promise": {
       "version": "7.3.1",
-      "resolved": "http://registry.npm.taobao.org/promise/download/promise-7.3.1.tgz",
+      "resolved": "http://registry.npm.alibaba-inc.com/promise/download/promise-7.3.1.tgz",
       "integrity": "sha1-BktyYCsY+Q8pGSuLG8QY/9Hr078=",
       "optional": true,
       "requires": {
@@ -7534,6 +7563,12 @@
       "version": "1.0.2",
       "resolved": "http://registry.npm.taobao.org/pseudomap/download/pseudomap-1.0.2.tgz",
       "integrity": "sha1-8FKijacOYYkX7wqKw0wa5aaChrM="
+    },
+    "psl": {
+      "version": "1.1.29",
+      "resolved": "http://registry.npm.alibaba-inc.com/psl/download/psl-1.1.29.tgz",
+      "integrity": "sha1-YPWA02AXC7cip5fMcEQR5tqFDGc=",
+      "optional": true
     },
     "public-encrypt": {
       "version": "4.0.2",
@@ -7577,9 +7612,9 @@
       "integrity": "sha1-fjL3W0E4EpHQRhHxvxQQmsAGUdc="
     },
     "qs": {
-      "version": "6.4.0",
-      "resolved": "http://registry.npm.taobao.org/qs/download/qs-6.4.0.tgz",
-      "integrity": "sha1-E+JtKK1rD/qpExLNO/cI7TUecjM=",
+      "version": "6.5.2",
+      "resolved": "http://registry.npm.alibaba-inc.com/qs/download/qs-6.5.2.tgz",
+      "integrity": "sha1-yzroBuh0BERYTvFUzo7pjUA/PjY=",
       "optional": true
     },
     "query-string": {
@@ -7877,33 +7912,60 @@
       }
     },
     "request": {
-      "version": "2.81.0",
-      "resolved": "http://registry.npm.taobao.org/request/download/request-2.81.0.tgz",
-      "integrity": "sha1-xpKJRqDgbF+Nb4qTM0af/aRimKA=",
+      "version": "2.88.0",
+      "resolved": "http://registry.npm.alibaba-inc.com/request/download/request-2.88.0.tgz",
+      "integrity": "sha1-nC/KT301tZLv5Xx/ClXoEFIST+8=",
       "optional": true,
       "requires": {
-        "aws-sign2": "0.6.0",
-        "aws4": "1.6.0",
+        "aws-sign2": "0.7.0",
+        "aws4": "1.8.0",
         "caseless": "0.12.0",
-        "combined-stream": "1.0.5",
-        "extend": "3.0.1",
+        "combined-stream": "1.0.7",
+        "extend": "3.0.2",
         "forever-agent": "0.6.1",
-        "form-data": "2.1.4",
-        "har-validator": "4.2.1",
-        "hawk": "3.1.3",
-        "http-signature": "1.1.1",
+        "form-data": "2.3.2",
+        "har-validator": "5.1.0",
+        "http-signature": "1.2.0",
         "is-typedarray": "1.0.0",
         "isstream": "0.1.2",
         "json-stringify-safe": "5.0.1",
-        "mime-types": "2.1.17",
-        "oauth-sign": "0.8.2",
-        "performance-now": "0.2.0",
-        "qs": "6.4.0",
-        "safe-buffer": "5.1.1",
-        "stringstream": "0.0.5",
-        "tough-cookie": "2.3.3",
+        "mime-types": "2.1.20",
+        "oauth-sign": "0.9.0",
+        "performance-now": "2.1.0",
+        "qs": "6.5.2",
+        "safe-buffer": "5.1.2",
+        "tough-cookie": "2.4.3",
         "tunnel-agent": "0.6.0",
-        "uuid": "3.1.0"
+        "uuid": "3.3.2"
+      },
+      "dependencies": {
+        "mime-db": {
+          "version": "1.36.0",
+          "resolved": "http://registry.npm.alibaba-inc.com/mime-db/download/mime-db-1.36.0.tgz",
+          "integrity": "sha1-UCBHjbPH/pOq17vMTc+GnEM2M5c=",
+          "optional": true
+        },
+        "mime-types": {
+          "version": "2.1.20",
+          "resolved": "http://registry.npm.alibaba-inc.com/mime-types/download/mime-types-2.1.20.tgz",
+          "integrity": "sha1-kwy3GdVx6QNzhSD4RwkRVIyizBk=",
+          "optional": true,
+          "requires": {
+            "mime-db": "1.36.0"
+          }
+        },
+        "safe-buffer": {
+          "version": "5.1.2",
+          "resolved": "http://registry.npm.alibaba-inc.com/safe-buffer/download/safe-buffer-5.1.2.tgz",
+          "integrity": "sha1-mR7GnSluAxN0fVm9/St0XDX4go0=",
+          "optional": true
+        },
+        "uuid": {
+          "version": "3.3.2",
+          "resolved": "http://registry.npm.alibaba-inc.com/uuid/download/uuid-3.3.2.tgz",
+          "integrity": "sha1-G0r0lV6zB3xQHCOHL8ZROBFYcTE=",
+          "optional": true
+        }
       }
     },
     "require-directory": {
@@ -8004,6 +8066,11 @@
       "requires": {
         "ret": "0.1.15"
       }
+    },
+    "safer-buffer": {
+      "version": "2.1.2",
+      "resolved": "http://registry.npm.alibaba-inc.com/safer-buffer/download/safer-buffer-2.1.2.tgz",
+      "integrity": "sha1-RPoWGwGHuVSd2Eu5GAL5vYOFzWo="
     },
     "sax": {
       "version": "1.2.4",
@@ -8279,15 +8346,6 @@
         "kind-of": "3.2.2"
       }
     },
-    "sntp": {
-      "version": "1.0.9",
-      "resolved": "http://registry.npm.taobao.org/sntp/download/sntp-1.0.9.tgz",
-      "integrity": "sha1-ZUEYTMkK7qbG57NeJlkIJEPGYZg=",
-      "optional": true,
-      "requires": {
-        "hoek": "2.16.3"
-      }
-    },
     "sockjs": {
       "version": "0.3.19",
       "resolved": "http://registry.npm.alibaba-inc.com/sockjs/download/sockjs-0.3.19.tgz",
@@ -8432,27 +8490,20 @@
       "integrity": "sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw="
     },
     "sshpk": {
-      "version": "1.13.1",
-      "resolved": "http://registry.npm.taobao.org/sshpk/download/sshpk-1.13.1.tgz",
-      "integrity": "sha1-US322mKHFEMW3EwY/hzx2UBzm+M=",
+      "version": "1.14.2",
+      "resolved": "http://registry.npm.alibaba-inc.com/sshpk/download/sshpk-1.14.2.tgz",
+      "integrity": "sha1-xvxhZIo9nE52T9P8306hBeSSupg=",
       "optional": true,
       "requires": {
-        "asn1": "0.2.3",
+        "asn1": "0.2.4",
         "assert-plus": "1.0.0",
-        "bcrypt-pbkdf": "1.0.1",
+        "bcrypt-pbkdf": "1.0.2",
         "dashdash": "1.14.1",
-        "ecc-jsbn": "0.1.1",
+        "ecc-jsbn": "0.1.2",
         "getpass": "0.1.7",
         "jsbn": "0.1.1",
+        "safer-buffer": "2.1.2",
         "tweetnacl": "0.14.5"
-      },
-      "dependencies": {
-        "assert-plus": {
-          "version": "1.0.0",
-          "resolved": "http://registry.npm.taobao.org/assert-plus/download/assert-plus-1.0.0.tgz",
-          "integrity": "sha1-8S4PPF13sLHN2RRpQuTpbB5N1SU=",
-          "optional": true
-        }
       }
     },
     "ssri": {
@@ -8600,12 +8651,6 @@
       "requires": {
         "safe-buffer": "5.1.1"
       }
-    },
-    "stringstream": {
-      "version": "0.0.5",
-      "resolved": "http://registry.npm.taobao.org/stringstream/download/stringstream-0.0.5.tgz",
-      "integrity": "sha1-TkhM1N5aC7vuGORjB3EKioFiGHg=",
-      "optional": true
     },
     "strip-ansi": {
       "version": "3.0.1",
@@ -8868,11 +8913,12 @@
       }
     },
     "tough-cookie": {
-      "version": "2.3.3",
-      "resolved": "http://registry.npm.taobao.org/tough-cookie/download/tough-cookie-2.3.3.tgz",
-      "integrity": "sha1-C2GKVWW23qkL80JdBNVe3EdadWE=",
+      "version": "2.4.3",
+      "resolved": "http://registry.npm.alibaba-inc.com/tough-cookie/download/tough-cookie-2.4.3.tgz",
+      "integrity": "sha1-U/Nto/R3g7CSWvoG/587FlKA94E=",
       "optional": true,
       "requires": {
+        "psl": "1.1.29",
         "punycode": "1.4.1"
       }
     },
@@ -8886,6 +8932,11 @@
       "resolved": "http://registry.npm.taobao.org/trim-right/download/trim-right-1.0.1.tgz",
       "integrity": "sha1-yy4SAwZ+DI3h9hQJS5/kVwTqYAM="
     },
+    "tryer": {
+      "version": "1.0.1",
+      "resolved": "http://registry.npm.alibaba-inc.com/tryer/download/tryer-1.0.1.tgz",
+      "integrity": "sha1-8shUBoALmw90yfdGW4HqrSQSUvg="
+    },
     "tslib": {
       "version": "1.9.3",
       "resolved": "http://registry.npm.alibaba-inc.com/tslib/download/tslib-1.9.3.tgz",
@@ -8898,7 +8949,7 @@
     },
     "tunnel-agent": {
       "version": "0.6.0",
-      "resolved": "http://registry.npm.taobao.org/tunnel-agent/download/tunnel-agent-0.6.0.tgz",
+      "resolved": "http://registry.npm.alibaba-inc.com/tunnel-agent/download/tunnel-agent-0.6.0.tgz",
       "integrity": "sha1-J6XeoGs2sEoKmWZ3SykIaPD8QP0=",
       "optional": true,
       "requires": {
@@ -8907,7 +8958,7 @@
     },
     "tweetnacl": {
       "version": "0.14.5",
-      "resolved": "http://registry.npm.taobao.org/tweetnacl/download/tweetnacl-0.14.5.tgz",
+      "resolved": "http://registry.npm.alibaba-inc.com/tweetnacl/download/tweetnacl-0.14.5.tgz",
       "integrity": "sha1-WuaBd/GS1EViadEIr6k/+HQ/T2Q=",
       "optional": true
     },
@@ -9260,21 +9311,13 @@
     },
     "verror": {
       "version": "1.10.0",
-      "resolved": "http://registry.npm.taobao.org/verror/download/verror-1.10.0.tgz",
+      "resolved": "http://registry.npm.alibaba-inc.com/verror/download/verror-1.10.0.tgz",
       "integrity": "sha1-OhBcoXBTr1XW4nDB+CiGguGNpAA=",
       "optional": true,
       "requires": {
         "assert-plus": "1.0.0",
         "core-util-is": "1.0.2",
         "extsprintf": "1.3.0"
-      },
-      "dependencies": {
-        "assert-plus": {
-          "version": "1.0.0",
-          "resolved": "http://registry.npm.taobao.org/assert-plus/download/assert-plus-1.0.0.tgz",
-          "integrity": "sha1-8S4PPF13sLHN2RRpQuTpbB5N1SU=",
-          "optional": true
-        }
       }
     },
     "vm-browserify": {
@@ -9464,6 +9507,68 @@
         "uglifyjs-webpack-plugin": "1.2.7",
         "watchpack": "1.6.0",
         "webpack-sources": "1.1.0"
+      }
+    },
+    "webpack-bundle-analyzer": {
+      "version": "3.0.2",
+      "resolved": "http://registry.npm.alibaba-inc.com/webpack-bundle-analyzer/download/webpack-bundle-analyzer-3.0.2.tgz",
+      "integrity": "sha1-IvGeptG1oV/XqQuq4LwPOb0eTUg=",
+      "requires": {
+        "acorn": "5.7.3",
+        "bfj": "6.1.1",
+        "chalk": "2.4.1",
+        "commander": "2.18.0",
+        "ejs": "2.6.1",
+        "express": "4.16.3",
+        "filesize": "3.6.1",
+        "gzip-size": "5.0.0",
+        "lodash": "4.17.10",
+        "mkdirp": "0.5.1",
+        "opener": "1.5.1",
+        "ws": "6.0.0"
+      },
+      "dependencies": {
+        "acorn": {
+          "version": "5.7.3",
+          "resolved": "http://registry.npm.alibaba-inc.com/acorn/download/acorn-5.7.3.tgz",
+          "integrity": "sha1-Z6ojG/iBKXS4UjWpZ3Hra9B+onk="
+        },
+        "ansi-styles": {
+          "version": "3.2.1",
+          "resolved": "http://registry.npm.alibaba-inc.com/ansi-styles/download/ansi-styles-3.2.1.tgz",
+          "integrity": "sha1-QfuyAkPlCxK+DwS43tvwdSDOhB0=",
+          "requires": {
+            "color-convert": "1.9.1"
+          }
+        },
+        "chalk": {
+          "version": "2.4.1",
+          "resolved": "http://registry.npm.alibaba-inc.com/chalk/download/chalk-2.4.1.tgz",
+          "integrity": "sha1-GMSasWoDe26wFSzIPjRxM4IVtm4=",
+          "requires": {
+            "ansi-styles": "3.2.1",
+            "escape-string-regexp": "1.0.5",
+            "supports-color": "5.5.0"
+          }
+        },
+        "commander": {
+          "version": "2.18.0",
+          "resolved": "http://registry.npm.alibaba-inc.com/commander/download/commander-2.18.0.tgz",
+          "integrity": "sha1-K/Bj3e58eJEXaYGizHmOV1S8aXA="
+        },
+        "has-flag": {
+          "version": "3.0.0",
+          "resolved": "http://registry.npm.alibaba-inc.com/has-flag/download/has-flag-3.0.0.tgz",
+          "integrity": "sha1-tdRU3CGZriJWmfNGfloH87lVuv0="
+        },
+        "supports-color": {
+          "version": "5.5.0",
+          "resolved": "http://registry.npm.alibaba-inc.com/supports-color/download/supports-color-5.5.0.tgz",
+          "integrity": "sha1-4uaaRKyHcveKHsCzW2id9lMO/I8=",
+          "requires": {
+            "has-flag": "3.0.0"
+          }
+        }
       }
     },
     "webpack-dev-middleware": {
@@ -9660,6 +9765,14 @@
       "version": "1.0.2",
       "resolved": "http://registry.npm.taobao.org/wrappy/download/wrappy-1.0.2.tgz",
       "integrity": "sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8="
+    },
+    "ws": {
+      "version": "6.0.0",
+      "resolved": "http://registry.npm.alibaba-inc.com/ws/download/ws-6.0.0.tgz",
+      "integrity": "sha1-6qSUre0ArEKJ1FW6yNhMfGUc7zU=",
+      "requires": {
+        "async-limiter": "1.0.0"
+      }
     },
     "xtend": {
       "version": "4.0.1",
