@@ -82,7 +82,11 @@ let tempOptions = {
   export: argv.opts.moduleExport,
   notClear: argv.opts.notClear,
   extractCss: argv.opts.extractCss,
-  notCompress: argv.opts.notCompress
+  notCompress: argv.opts.notCompress,
+
+  // life cycle
+  beforeConfigBind: argv.opts.beforeConfigBind || (firstArgs => firstArgs)
+  
 };
 
 // if there is a custom config

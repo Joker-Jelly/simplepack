@@ -1,5 +1,10 @@
-import styles from './index2';
-// require('xx');
+import pageX from './src/page.jsx';
+import './index.less';
 
-console.log(...['a', 'b', 'c','e']);
-console.log(styles);
+console.log(pageX);
+
+setTimeout(() => {
+  import('./src/page').then(page => {
+    page.default();
+  });
+}, 1000);

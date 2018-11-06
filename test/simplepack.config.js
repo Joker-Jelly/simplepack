@@ -1,5 +1,7 @@
 module.exports = {
-  entry: './index.js',
+	distDirName: 'dist',
+	distPublicPath: 'https://g.alicdn.com/dist/',
+	entry: './index.js',
   moduleAlias: {
   	'index2': './index.less'
   },
