@@ -1,4 +1,4 @@
-import pageX from './src/page.jsx';
+import pageX from './src/page.ts';
 import './index.less';
 
 console.log(pageX);
