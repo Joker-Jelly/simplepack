@@ -44,7 +44,7 @@ const parseSubComArgv = (cmds, sub, opts) => {
 
 args
   .option('entry', 'The list entries')
-  .option('port', 'The port that server should listen', PORT)
+  .option('port', 'The port that server should listen')
   .option('runtime-engine', 'The name of workflow engine', 'webpack')
   .option('config', 'Specifies a different configuration file to pick up')
   .option('not-compress', 'Do not compress the output code')
@@ -69,9 +69,6 @@ if (!utils.isObject(argv.opts)) {
 /*------------------------------------------------------------*/
 /* Parse Options */
 
-// override the default port
-PORT = argv.opts.port;
-
 // default options
 let tempOptions = {
 
@@ -79,6 +76,7 @@ let tempOptions = {
   engine: argv.opts.runtimeEngine || 'webpack',
 
   entry: argv.opts.entry,
+  port: argv.opts.port,
   export: argv.opts.moduleExport,
   notClear: argv.opts.notClear,
   extractCss: argv.opts.extractCss,
@@ -98,6 +96,9 @@ if (!argv.opts.cliOnly && utils.exist(customConfig)) {
     entry: defaultMainEntry
   }, require(customConfig), tempOptions);
 }
+
+// override the default port
+PORT = tempOptions.port || PORT;
 
 /**
  * parse options to webpack style
@@ -154,7 +155,7 @@ const parseOptions = function(){
 
 parseOptions().then(options => {
 
-  utils.log.info(`Using config file \n\n${utils.formatJSONString(options)}\n`);
+  // utils.log.info(`Using config file \n\n${utils.formatJSONString(options)}\n`);
 
   // specific engine's processor
   const processor = require(`../lib/${options.engine}/processor`);
@@ -172,8 +173,7 @@ parseOptions().then(options => {
         .on('error', () => {
           utils.log.error(`Server port ${PORT} in use, auto change to ${++PORT}`);
           server.listen(PORT);
-        })
-        .once('listening', () => utils.log.info(`Server started at http://${HOST}:${PORT}`));
+        });
   };
 
 }).catch(e => utils.log.error(e.stack));
