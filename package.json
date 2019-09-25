@@ -1,6 +1,6 @@
 {
   "name": "simplepack",
-  "version": "2.4.2",
+  "version": "2.4.3",
   "description": "Make pack simple then ever, base on webpack",
   "main": "index.js",
   "bin": {
