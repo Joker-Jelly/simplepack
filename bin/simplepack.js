@@ -1,5 +1,4 @@
 #! /usr/bin/env node
-
 const path  = require('path');
 const utils = require('../lib/utils');
 const args  = require('args');
@@ -88,7 +87,7 @@ let tempOptions = {
 };
 
 // if there is a custom config
-const customConfig = path.join(DIR_PROJECT, argv.opts.config || 'simplepack.config.js');
+const customConfig = argv.opts.config || path.join(DIR_PROJECT, 'simplepack.config.js');
 
 // cli argv will cover the custom config
 if (!argv.opts.cliOnly && utils.exist(customConfig)) {
